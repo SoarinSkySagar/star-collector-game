@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useRef } from 'react';
-import Phaser from 'phaser';
+import * as Phaser from 'phaser';
 
 const GameContext = createContext();
 
