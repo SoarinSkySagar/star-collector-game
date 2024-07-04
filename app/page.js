@@ -1,10 +1,12 @@
+import dynamic from 'next/dynamic';
 import { GameProvider } from '@/context/GameContext';
-import Game from '@/components/Game';
+
+const DynamicGame = dynamic(() => import('@/components/Game'), { ssr: false });
 
 export default function Home() {
     return (
         <GameProvider>
-            <Game />
+            <DynamicGame />
         </GameProvider>
     );
 }
