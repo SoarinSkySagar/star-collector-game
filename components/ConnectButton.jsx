@@ -26,7 +26,6 @@ export default function RegisterUser() {
                 preflightCommitment: "processed"
             });             
             const program = new Program(idl, programID, provider);
-            setProgram(program);
         }
     }, [wallet]);
 
