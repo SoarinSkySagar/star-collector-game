@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import React, { useState, useEffect } from 'react';
-import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
+import React, { useEffect } from 'react';
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { Program, AnchorProvider, web3 } from "@project-serum/anchor";
 import idl from "@/public/idl/idl.json";
-import * as anchor from "@project-serum/anchor";
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -32,7 +31,6 @@ export default function RegisterUser() {
     return (
         <div className='min-h-screen'>
             <WalletMultiButtonDynamic />
-            {/* <br /> */}
             <Link className='bg-white text-black p-3 m-6 rounded-lg text-2xl font-bold' href="/play">Play game</Link>
         </div>
     );

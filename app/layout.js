@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import WalletContextProvider from "@/context/WalletContext";
+import PixelTrailCanvas from "@/components/Pixeltrail";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <WalletContextProvider>
-          {children}
+          <PixelTrailCanvas
+            pixelSize={45}
+            pixelColor="255, 0, 0"
+            fadeSpeed={0.01}
+            trailDuration={50}
+          />
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            {children}
+          </div>
         </WalletContextProvider>
       </body>
     </html>
