@@ -12,13 +12,19 @@
 // }
 
 import RegisterUser from '@/components/ConnectButton'
-import React from 'react'
+import PixelTrailCanvas from '@/components/Pixeltrail'
 
 export default function 
 Register() {
   return (
     <div>
-        <RegisterUser/>
+        <PixelTrailCanvas
+            pixelSize={45}
+            pixelColor="255, 0, 0"
+            fadeSpeed={0.01}
+            trailDuration={50}
+        />
+        <RegisterUser style={{ position: 'relative', zIndex: 1 }} />
     </div>
   )
 }
